@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "blogpost_inarte"
+version = "0.1.0"
+description = "blogpost-inarte using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = "^0.41.1" }
+
+[tool.poetry.scripts]
+blogpost_inarte = "blogpost_inarte.main:run"
+train = "blogpost_inarte.main:train"
+replay = "blogpost_inarte.main:replay"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
